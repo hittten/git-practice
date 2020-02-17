@@ -1,6 +1,10 @@
 Gilberto
+<<<<<<< HEAD
 Adrián Cabezas
 Gilberto2
 Adrián
 Alvaro
 Rafa
+=======
+Pache
+>>>>>>> pache

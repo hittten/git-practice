@@ -1,5 +1,8 @@
 Gilberto
+<<<<<<< HEAD
 Rodrigo
+=======
+>>>>>>> me he comido el comentario
 Adrián Cabezas
 Gilberto2
 Adrián

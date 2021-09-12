@@ -1,3 +1,4 @@
 .idea/
 .vscode/
-src/exclude-gilberto/
+src/exclude-gilberto/*
+!src/exclude-gilberto/in-repository.txt

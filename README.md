@@ -28,3 +28,15 @@ Installation and official site: https://git-scm.com/
 - Create an SSH key and set up your public key.
 - Familiarize with git CLI.
 - Create your custom config. See files: `/config-files`
+
+## 2. Getting and Creating Projects
+
+### Reference
+
+- init - https://git-scm.com/docs/git-init
+- clone - https://git-scm.com/docs/git-clone
+
+### Hands On
+
+- Clone this repository: https://github.com/hittten/git-practice
+- Create your own local repository.

@@ -109,3 +109,112 @@ before you start run `./move/to init`
 - Look where are the remote references `git remote show origin`
 - Push your branch to remote repository `git push origin practice-your-name`
 - Pull other branch to your local repository `git pull origin dev` and go there `git co dev`
+
+## 6. Inspection and Comparison
+
+### Reference
+
+- show - https://git-scm.com/docs/git-show
+- log - https://git-scm.com/docs/git-log
+- diff - https://git-scm.com/docs/git-diff
+
+### Hands On
+
+- Let's see more information about a commit `git show main`
+- You can compare branches `git diff main dev` or `git diff dev main`
+- You can see commits in different branches `git log main` or `git log dev`
+
+## 7. Patching
+
+### Reference
+
+- diff - https://git-scm.com/docs/git-diff
+- rebase - https://git-scm.com/docs/git-rebase
+
+### Hands On
+
+- You must merge your branch `practice-your-name` with `dev` branch by rebasing your branch with `dev` first.
+- Then try to push your local `dev` with `git push origin dev`
+  * If you get an error, you will have to pull with rebase `git pull origin dev --rebase` and push
+    again `git push origin dev`
+
+## 8. Debugging
+
+### Reference
+
+- blame - https://git-scm.com/docs/git-blame
+
+### Hands On
+
+- See who modified the src/everybody.txt file `git blame src/everybody.txt`
+
+## 9. Hands On practice
+
+- Create a new repository on your gitHub.
+- Create a file "README.md", put the text "initial commit" and do your first commit
+- Now keep doing that for each commit and put the same text, always in a new line in "README.md"
+
+And try to recreate this git tree:
+
+```
+* 2da56bf - (HEAD -> dev) another feature
+* 289ee0b - (origin/dev) creating new feature
+* 4239af6 - set up the project
+| * bc7e223 - (origin/main, main) fixing something else
+| * 5f26cf3 - hotfix production
+|/  
+* af4ae6c - first change
+* b7e743e - initial commit
+```
+
+At this point you will have something like this:
+
+README.md branch: **main**
+
+```
+initial commit
+first change
+hotfix production
+fixing something else
+```
+
+README.md branch: **dev**
+
+```
+initial commit
+first change
+set up the project
+creating new feature
+another feature
+```
+
+Now you need to run a couple git commands to finish like this:
+
+```
+* 5040e4a - (HEAD -> main, origin/main, origin/dev, dev) another feature
+* 452928c - creating new feature
+* ad2b377 - set up the project
+* d684962 - fixing something else
+* ea106fd - hotfix production
+* 9f72894 - first change
+* b06811f - initial commit
+```
+
+And README.md
+
+```
+initial commit
+first change
+hotfix production
+fixing something else
+set up the project
+creating new feature
+another feature
+```
+
+## 10. What is next?
+
+### Reference
+
+- cherry-pick - https://git-scm.com/docs/git-cherry-pick
+- difftool - https://git-scm.com/docs/git-difftool

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TASK MANAGER</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Administrador de tareas</h1>
+</header>
+    <section class="task">
+        <label>
+        <input type="text"  placeholder="¿Qué necesitas hacer?">
+        </label>
+        <ul>
+            <li>
+                <div>
+                <input type="checkbox">
+                <label>Mi primera tarea</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox">
+                <label>Una tarea sin terminar</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox" checked="true" >
+                <label>Una tarea terminada</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="updating">
+                <div>
+                    <input type="checkbox" checked="true" >
+                    <label>Una tarea terminada</label>
+                </div>
+                <span class="material-icons basura">delete_outline</span>
+                <input type="text" value="Una tarea en modo edicion"><span class="material-icons">done</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox" >
+                <label>Una tarea para eliminar</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox" >
+                <label>Una tarea con el texto muy largo "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox">
+                <label>Tarea numero 7</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox"  >
+                <label>Tarea numero 8</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox"  >
+                <label>Tarea numero 9</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li>
+                <div>
+                <input type="checkbox" >
+                <label>Tarea numero 10</label>
+                </div>
+                <span class="material-icons">delete_outline</span>
+            </li>
+        </ul>
+        <div class="final">
+            <p>Quedan 9 tareas</p>
+            <div>
+                <button class="boton" disabled >Todas</button>
+                <button class="boton">Pendiente</button>
+                <button class="boton">Completadas</button>
+            </div>
+        </div>
+    </section>
+    <div class="oculta">
+        <div class="box">
+        <h2>¿Estas seguro de que deseas eliminar esat tarea?</h2>
+        <p>Una tarea para eliminar</p>
+        <div>
+            <button class="botton">Si</button>
+            <button class="botton">No</button>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

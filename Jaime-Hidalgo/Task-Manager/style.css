@@ -1,0 +1,109 @@
+body {
+    text-align: center;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 ;
+}
+header h1{
+    font-size: 30px;
+    color: darkgrey;
+}
+
+.task{
+    max-width: 400px;
+    background: white;
+    margin: 0 auto;
+}
+
+.task label:first-child{
+    display: flex;
+    justify-content: start;
+}
+
+.task label input:first-child{
+    padding: 12px;
+    margin: 4px 0;
+    border:none;
+}
+.task ul{
+    list-style: none;
+    margin: 0 auto;
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.task li{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: baseline;
+}
+
+.final{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.final p{
+    font-size: 10px;
+}
+
+.boton{
+    background: darkslategrey;
+    padding: 5px 10px;
+    color: white;
+}
+.boton:disabled{
+    background: darkgrey;
+    color: lightgrey;
+}
+
+.oculta {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.updating div, .updating span.basura{
+    display: none;
+}
+.updating input{
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+}
+
+.botton{
+    font-size: 14px;
+    background: darkslategrey;
+    padding: 5px 10px;
+    color: white;
+}
+
+.box{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    justify-items: center;
+    padding: 10px 20px;
+    background: white;
+    max-width: 350px;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+.box div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}

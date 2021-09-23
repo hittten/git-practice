@@ -1,0 +1,117 @@
+*{
+    margin:0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+.Blackhead {
+    font-family: 'Bebas Neue', cursive;
+    padding-left: 25px;
+    padding-right:25px;
+    height: 64px;
+    background-color: black;
+    font-size: 14px;
+    color: #a2a2a2;
+    letter-spacing: 1.5px;
+}
+
+.PresentationBack{
+    font-family: 'Bebas Neue', cursive;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    background-color: #e7e7e7;
+    letter-spacing: 2px;
+    text-align: center;
+    height:200px ;
+}
+.button {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    padding: 13px 37px;
+    border-radius: 3px;
+    border: solid 2px #1c6698;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #1c6698;
+    cursor: pointer;
+}
+.SobreMi{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.43;
+     background: black;
+    color: #a2a2a2;
+     padding: 60px 20px 70px 20px;
+}
+.HabilidadesBack{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    font-size: 14px;
+    background: #e7e7e7;
+    padding: 60px 20px 70px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Habilidades{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.43;
+    display: flex;
+    flex-direction: row;
+    scroll-behavior: auto;
+
+}
+
+.frontbackEnd {
+    flex-shrink: 0;
+     border-radius: 3px;
+    padding: 30px 35px;
+    margin-right: 32px;
+    box-sizing: border-box;
+    color: white;
+    background: black;
+    text-align: center;
+}
+ul{
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: #a2a2a2
+}
+h3{
+    display: block;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+
+}
+.Developer{
+    color: #a2a2a2;
+    margin-bottom: 14px;
+    border: solid 1px #ffffff;
+    padding: 5px;
+    line-height: 13px;
+
+}
+footer{
+    display: flex;
+    height: 104px;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    color: #a2a2a2;
+}

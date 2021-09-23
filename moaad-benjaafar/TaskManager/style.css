@@ -1,0 +1,156 @@
+/* GLOBALS */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/*GENERALS*/
+main {
+    /*max-width: 100%;*/
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+body {
+    background: lightgray;
+}
+.allContent {
+    padding: 0 15px;
+    background: white;
+    /*filter: blur(3px);*/  /*Comentar=desactivar*/
+}
+
+/*LAYOUTS*/
+label, h1, h3, span,h2,p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: darkslategrey;
+
+}
+
+label {
+    width: 100%;
+}
+div {
+    display: block;
+    margin: auto;
+}
+div {
+    margin-bottom: 10px;
+}
+hr {
+    margin-top: -3px;
+    margin-bottom: -3px;
+    position:relative;
+    right: 15px;
+    width: 420px;
+    border: 1px solid lightgray;
+}
+.row {
+    display: flex;
+}
+
+.row span {
+    margin-left: auto;
+}
+
+/*TEXT*/
+.textTaskArea {
+    border:none;
+    height: 37px;
+    width: 100%;
+}
+.editionTaskTitle {
+    font-weight: 400;
+
+}
+.line{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid lightgray;
+}
+h1 {
+    /*filter: blur(3px);*/  /*Comentar=desactivar*/
+    text-align: center;
+    color: darkgray;
+    font-weight: 600 !important;
+    font-size: 30px !important;
+}
+h2{
+
+    color: darkslategrey;
+    font-weight: 500 !important;
+    font-size: 25px !important;
+}
+p {
+    margin: 0;
+    display: inline-block;
+}
+
+#rayado {
+    text-decoration: line-through
+}
+
+.tasksRemain {
+    font-size: 12px;
+}
+.material-icons{
+ color: darkslategrey;
+}
+/*BUTTON*/
+.activeButton {
+    background: darkslategrey;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 7px;
+    color: white;
+
+}
+
+.inactiveButtons {
+    background: gray;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 7px;
+    color: lightgray;
+}
+/*POPUP*/
+.popButton {
+    background: darkslategrey;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.popupContent{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    align-items: center;
+
+}
+.popup {
+    display: none; /*!*Descomentar=desactivar*! */
+    z-index: 1;
+    position: absolute;
+    top:40px;
+    left: 30%;
+    background: white;
+    height: 320px;
+    width: 40%;
+    padding: 10px;
+    box-shadow: 2px 2px 10px 2px black;
+}
+/*FOOTER*/
+.footer {
+    align-items: center;
+}
+
+
+
+

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>TaskManager</title>
+</head>
+<body>
+<header>
+    <h1>
+        Administrador de tareas
+    </h1>
+</header>
+<main>
+    <div class="popup">
+        <h2>¿Estás seguro de que deseas eliminar esta tarea?</h2>
+         <div class="popupContent">
+             <p>Una tarea para eliminar</p>
+            <div>  <span class="popButton">Si</span>
+                <span class="popButton">No</span></div>
+
+         </div>
+    </div>
+
+    <div class="allContent">
+        <div>
+            <label >
+                <input class = "textTaskArea" type="text" placeholder="¿Qué necesitas hacer?">
+            </label>
+            <hr>
+        </div>
+        <div class=" row">
+            <label>
+                <input type="checkbox"> Mi primera tarea
+            </label>
+
+            <span class="material-icons"> delete_outline </span>
+        </div>
+
+
+        <div class=" row">
+            <label>
+                <input type="checkbox"> Una tarea sin terminar
+
+            </label>
+            <span class="material-icons">  delete_outline </span>
+        </div>
+
+
+        <div class=" row">
+            <label>
+                <input type="checkbox" checked>
+                <p id="rayado"> Una tarea terminada</p>
+            </label>
+
+            <span class="material-icons">  delete_outline </span>
+        </div>
+        <div class="row line">
+        <p class="editionTaskTitle">Una tarea en modo edición </p>
+        <span class="material-icons">  check </span>
+        </div>
+        <div class=" row">
+            <label>
+                <input type="checkbox">Una tarea para eliminar
+            </label>
+            <span class="material-icons">  delete_outline </span>
+        </div>
+
+
+        <div class=" row">
+            <label>
+                <input type="checkbox">Una tarea con el texto muy largo: "Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat."
+            </label>
+
+            <span class="material-icons">  delete_outline </span>
+        </div>
+
+
+        <div class=" row">
+            <label>
+                <input type="checkbox">Tarea numero 7
+            </label>
+
+            <span class="material-icons">  delete_outline </span>
+        </div>
+        <div class=" row">
+            <label>
+                <input type="checkbox">Tarea numero 8
+            </label>
+
+            <span class="material-icons">  delete_outline </span>
+        </div>
+        <div class=" row">
+            <label>
+                <input type="checkbox">Tarea numero 9
+            </label>
+
+            <span class="material-icons">  delete_outline </span>
+        </div>
+        <div class="row">
+            <label>
+                <input type="checkbox">Tarea numero 10
+            </label>
+
+            <span class="material-icons">  delete_outline </span>
+        </div>
+        <hr>
+        <div class="row footer" >
+            <p class="tasksRemain" >Quedan 9 tareas</p>
+            <span class="inactiveButtons">Todas</span>
+            <span class="activeButton">Pendientes</span>
+            <span class="activeButton">Completadas</span>
+        </div>
+
+    </div>
+
+</main>
+</body>
+</html>

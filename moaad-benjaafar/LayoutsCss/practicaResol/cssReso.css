@@ -1,0 +1,210 @@
+/* General */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+    background: #e7e7e7;
+    margin: 0;
+    text-align: center;
+}
+
+strong {
+    font-weight: 500;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1.60px;
+    font-weight: normal;
+}
+
+.button {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 13px 31px;
+    margin-top: 24px;
+    border-radius: 3px;
+    border: solid 2px #1c6698;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #1c6698;
+    cursor: pointer;
+    line-height: 0.5;
+}
+
+/*Layout*/
+.wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+article section {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+article section:nth-child(even) {
+    background: black;
+}
+
+/*Header*/
+header h2 {
+    font-size: 14px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background: black;
+    color: #a2a2a2;
+}
+
+header #icon-close {
+    display: none;
+}
+
+header nav, header.nav-open #icon-open {
+    display: none;
+}
+
+header.nav-open nav, header.nav-open #icon-close {
+    display: block;
+
+}
+header.nav-open #icon-close{
+    z-index: 1;
+}
+header nav {
+    width: 100%;
+    top: 0;
+    left: 0 ;
+    background: #e7e7e7;
+    position: absolute;
+    padding: 50px;
+}
+header nav ul{
+    list-style: none;
+    margin: 0;
+    padding:0;
+
+}header nav ul li{
+     padding:20px;
+}
+
+/*main section (summary)*/
+article section:first-child p {
+    font-size: 18px;
+}
+
+article section:first-child h1 {
+    font-size: 36px;
+    width: 220px;
+    margin: 0 auto;
+}
+
+/*about me*/
+article #about-me {
+    color: #a2a2a2;
+}
+
+article #about-me .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+
+}
+
+article #about-me .videoWrapper iframe {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+/*skills*/
+article #skills .list {
+
+}
+
+article #skills .list::before,
+article #skills .list::after {
+    content: "";
+    margin-left: 24px;
+}
+
+article #skills .list {
+    padding-bottom: 16px;
+    overflow: auto;
+    display: flex;
+}
+
+article #skills .list .skill {
+    border-radius: 3px;
+    margin-right: 32px;
+    padding: 30px 35px;
+    width: 208px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background: black;
+    color: #a2a2a2;
+    flex-shrink: 0;
+
+}
+
+article #skills .list .skill:last-child {
+    margin-right: 0;
+}
+
+article #skills .list .skill h3 {
+    margin-top: 0;
+    font-size: 14px;
+    border: solid 1px #fff;
+}
+
+article #skills .list .skill h4 {
+    color: #ffffff;
+}
+
+article #skills .list .skill ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer {
+    height: 104px;
+    color: #a2a2a2;
+    display: flex;
+    background: black;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    article #skills .list .skill {
+        margin-right: 128px;
+    }
+}
+
+@media screen and (min-width: 535px) {
+    article #skills .list {
+        justify-content: center;
+    }
+}

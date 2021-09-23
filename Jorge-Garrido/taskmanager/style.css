@@ -1,0 +1,114 @@
+body {
+    background: #e7e7e7;
+    color: grey;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.div-form {
+    position: absolute;
+    z-index: 0;
+    width: 600px;
+    margin-left: 500px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    padding: 24px;
+}
+
+#text-area {
+    width: 550px;
+    height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: grey;
+}
+
+.material-icons {
+    display: flex;
+    margin-right: 0px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button {
+    line-height: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    background: #003950;
+    color: #fff;
+    display: inline-block;
+    justify-content: space-around;
+    padding: 12px 20px;
+    border-radius: 3px;
+    border: solid 1px #003950;
+}
+
+.button:hover {
+    background: #fff;
+    color: #003950;
+}
+
+#icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -10px;
+    margin-bottom: -8px;
+}
+
+.footer-button .button {
+    margin-right: 10px;
+}
+
+
+/* VENTANA FLOTANTE */
+
+.ventana-flotante {
+    /* display: none; */
+    position: absolute;
+    z-index: 1;
+    margin-left: 500px;
+    background: #fff;
+    color: #003950;
+    width: 400px;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.h1-div {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.ventana-flotante p.tarea {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.ventana-flotante .p-button {
+    margin-left: 135px;
+}

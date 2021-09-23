@@ -13,7 +13,7 @@
     excludesfile = ~/.gitignore
     autocrlf = input
 [user]
-    name = Your name
+    name = Jorge Garrido
     email = email@example.com
 [pull]
     rebase = true

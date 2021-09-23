@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Taskmanager</title>
+</head>
+
+<body>
+    <h1>Administrador de tareas</h1>
+    <div class="div-form">
+        <form class="form" action="POST">
+
+            <textarea id="text-area" style="border: none;"> ¿Qué necesitas hacer?</textarea>
+            <hr>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Mi primera tarea</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Una tarea sin terminar</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Una tarea terminada</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <h2>Una tarea en modo edición <span id="icons" class="material-icons">done</span></h2>
+            <hr>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Una tarea para eliminar</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Una tarea con un texto muy largo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa voluptatum quibusdam, soluta error molestias tempore labore nulla modi nemo repellat ut impedit minima nostrum quo veritatis quam deserunt. A."</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Tarea número 7</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Tarea número 8</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Tarea número 9</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <p>
+                <input type="checkbox" id="check" name="opc">
+                <label>Tarea número 10</label>
+                <span id="icons" class="material-icons">delete_outline</span>
+            </p>
+            <hr>
+            <p class="footer-button">
+                <a href="#" class="button">Todas</a>
+                <a href="#" class="button">Pendientes</a>
+                <a href="#" class="button">Completadas</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <div class="ventana-flotante">
+        <h1 class="h1-div">¿Estás seguro de que deseas eliminar esta tarea?</h1>
+        <p class="tarea">Una tarea para eliminar</p>
+        <p class="p-button">
+            <a href="#" class="button">Si</a>
+            <a href="#" class="button">No</a>
+        </p>
+    </div>
+</body>
+
+</html>

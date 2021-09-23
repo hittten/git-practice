@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<h1>Administrador de tareas</h1>
+
+<main>
+
+    <div class="popup">
+        <h2>¿Estás seguro de que deseas eliminar esta tarea?</h2>
+        <p>Una tarea para eliminar</p>
+        <div class="popup-buttons">
+            <button class="button" type="button">Si</button>
+            <button class="button" type="button">No</button>
+        </div>
+    </div>
+
+    <div class="card">
+
+        <div class="wrap input-div">
+            <label>
+                <input type="text" placeholder="¿Qué necesitas hacer?">
+            </label>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="primeraTarea" value="primera_tarea"><label for="primeraTarea">Mi primera
+            Tarea</label>
+            <span class="icon material-icons">delete_outline</span>
+
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="segundaTarea" value="segundaTarea"><label for="segundaTarea">Una tarema
+            similar</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="terceraTarea" value="terceraTareaa"><label for="terceraTarea">Una tarea
+            terminada</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap">
+            <label>
+                <input class="selected" type="text" placeholder="Una tarea en modo edición">
+            </label>
+            <span class="icon material-icons">done</span>
+        </div>
+
+        <hr class="selected__line">
+
+        <div class="wrap">
+            <input type="checkbox" id="tareaEliminar" value="tareaEliminar"><label for="tareaEliminar">Una tarea para
+            eliminar</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="tareaLorem" value="tareaLorem"><label for="tareaLorem">Una tarec on un texto muy
+            largo Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto at, consectetur consequuntur
+            cum deleniti deserunt eligendi hic qui quia quibusdam repellat repellendus sapiente sint temporibus veniam
+            voluptates. Ipsam, nam?</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="tarea7" value="tarea7"><label for="tarea7">Tarea numero 7</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="tarea8" value="tarea8"><label for="tarea8">Tarea numero 8</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="tarea9" value="tarea9"><label for="tarea9">Tarea numero 9</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" id="tarea10" value="tarea10"><label for="tarea10">Tarea numero 10</label>
+            <span class="icon material-icons">delete_outline</span>
+        </div>
+
+        <div class="wrap footer">
+            <p>Quedan 9 tareas</p>
+            <button class="button disabled" type="button">Todas</button>
+            <button class="button" type="button">Pendientes</button>
+            <button class="button" type="button">Completadas</button>
+        </div>
+
+    </div>
+</main>
+
+<script type="text/javascript" src="scripts/main.js"></script>
+
+</body>
+</html>

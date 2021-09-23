@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header" class="header">
+    <nav class="navigation">
+
+        <div class="navigation__header">
+            <span class="navigation__title">Juan Maravilloso</span>
+            <button class="navigation__burguer__menu">
+                <i class="fa fa-bars navigation__icon__open"></i>
+                <span class="xIcon material-icons navigation__icon__close hide">close</span>
+            </button>
+        </div>
+
+        <ul class="navigation__menu hide">
+            <li><a class="navigation__menu__link" href="index.html#sobreMi">SOBRE MI</a></li>
+            <li><a class="navigation__menu__link" href="index.html#habilidades">HABILIDADES</a></li>
+            <li><a class="navigation__menu__link" href="#contact">CONTÁCTAME</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <div class="container contact__container">
+
+        <h2 class="contact__title section__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+
+        <form action="">
+
+            <div class="form__inputs">
+                <div class="form__inputs__input">
+                    <label for="nombre" class="form__label">NOMBRE</label>
+                    <input type="text" id="nombre" name="nombre" class="form__input">
+                </div>
+
+                <div class="form__inputs__input">
+                    <label for="correo" class="form__label">CORREO</label>
+                    <input type="text" id="correo" name="correo" class="form__input">
+                </div>
+
+            </div>
+
+
+            <label for="mensaje" class="form__label">MENSAJE</label>
+            <textarea id="mensaje" name="mensaje" class="form__textarea"></textarea>
+
+            <div class="form__button__div">
+                <button type="submit" class="button form__button">ENVIAR</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="footer">
+    <p>&copy; JUAN MARAVILLOSO</p>
+</footer>
+
+<script type="text/javascript" src="scripts/main.js"></script>
+
+</body>
+</html>

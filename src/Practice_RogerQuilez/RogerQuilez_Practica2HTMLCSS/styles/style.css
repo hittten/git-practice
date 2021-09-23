@@ -1,0 +1,139 @@
+/* GLOBALS */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+h1 {
+    color: #AEAB96;
+    text-align: center;
+}
+
+label {
+    width: 100%;
+}
+
+h2 {
+    color: darkslategray;
+}
+
+/* UTILIDADES */
+.wrap {
+    display: flex;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.button {
+    align-self: center;
+    background-color: darkslategray;
+    height: 30px;
+    color: white;
+    border:none;
+    border-radius: 5px;
+}
+
+hr.selected__line {
+    border-top: 1px solid black;
+    width: 90%;
+    margin: 0 20px 0 10px;
+}
+
+input.selected::placeholder {
+    font-weight: bold;
+    color: black;
+}
+
+.disabled {
+    background-color: gray !important;
+}
+
+/* CARD */
+main {
+    position: relative;
+    margin: 0 auto;
+    width: 30%;
+    display: block;
+}
+
+.card {
+    /* filter: blur(3px); Uncomment this to open popup */
+    background-color: white;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px 1px #000000;
+}
+
+.icon {
+    margin-left: auto;
+}
+
+input[type="text"] {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 100%;
+}
+
+input:checked + label {
+    text-decoration: line-through;
+}
+
+.input-div {
+    border-bottom: 1px solid black;
+}
+
+/* FOOTER DIV */
+.footer {
+    border-top: 1px solid black;
+    justify-content: space-around;
+}
+
+.footer p {
+    font-size: 12px;
+    margin-right: 90px;
+}
+
+/* POPUP */
+.popup {
+    display: none; /* Coment to show popup */
+    position: absolute;
+    z-index: 999;
+    top: 100px;
+    left: 15%;
+    width: 70%;
+    height: 400px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px 2px #000000;
+}
+
+.popup p {
+    text-align: center;
+}
+
+.popup .popup-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    margin-bottom: 20px;
+}
+
+.popup button {
+    width: 60px;
+    height: 40px;
+    margin-right: 20px;
+}

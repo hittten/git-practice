@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de tareas</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #d3d3d3;
+            margin: 0;
+        }
+
+        .wrapper {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .flex-gap{
+            display: flex;
+            gap: 12px;
+        }
+
+        .space-between{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-center{
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #666666;
+            text-align: center;
+        }
+
+        p{
+            font-size: 10px;
+        }
+
+        form {
+            margin: 0 auto;
+            max-width: 400px;
+            padding-bottom: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 10px #666;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        label {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        button:disabled,
+        button[disabled]{
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+        }
+
+        .input {
+            all: unset;
+            border: 1px solid #d3d3d3;
+            width: 97%;
+            padding: 12px 0px 12px 10px;
+            color: red;
+        }
+        .modal{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .target{
+            max-width: 350px;
+            margin: 8% auto;
+            padding: 10px 20px;
+            background-color: white;
+        }
+        .target h2{
+            margin: 0;
+            font-size: 27px;
+        }
+        .target p{
+            text-align: center;
+            font-size: 17px;
+        }
+        .target button{
+
+            border-radius: 5px;
+            padding: 8px 20px;
+            color: white;
+            background-color: #1f3429;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Administrador de tareas</h1>
+</header>
+<main>
+    <form action="#" method="post">
+        <ul>
+            <li>
+                <label>
+                    <input class="input" type="text" id="name" name="user_name" placeholder="¿Qué necesitas hacer?">
+                </label>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="first" name="first" value="first">Mi primera tarea
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="unfinished" name="unfinished" value="unfinished">Una tarea sin terminar
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="finished" name="finished" value="finished">Una tarea terminada
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="toEnd" name="toEnd" value="toEnd">Una tarea para eliminar
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="long" name="long" value="long">Una tarea con un texto muy largo:
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque corporis deleniti eos,
+                    excepturi fugit hic minus modi neque nisi odit perferendis, possimus quisquam reprehenderit tempora."
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="seven" name="seven" value="seven">Tarea numero 7
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="eight" name="eight" value="eight">Tarea numero 8
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="nine" name="nine" value="nine">Tarea numero 9
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+            <li class="wrapper">
+                <label>
+                    <input type="checkbox" id="ten" name="ten" value="ten">Tarea numero 10
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+        </ul>
+        <hr>
+        <div class="wrapper space-between">
+            <p>Quedan 9 tareas</p>
+            <div class="flex-gap">
+                <button disabled>Todas</button>
+                <button>Pendientes</button>
+                <button>Completadas</button>
+            </div>
+        </div>
+    </form>
+</main>
+<div class="modal">
+    <div class="target">
+        <h2>¿Estás seguro de que deseas eliminar esta tarea?</h2>
+        <p>Una tarea para eliminar</p>
+        <div class="flex-center">
+            <button>Si</button>
+            <button>No</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

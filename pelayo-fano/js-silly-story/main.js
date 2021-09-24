@@ -12,7 +12,7 @@ let insertX = ["Willy the Goblin","Big Daddy","Father Christmas"]
 let insertY = ["the soup kitchen","Disneyland","the White House"]
 let insertZ = ["spontaneously combusted","melted into a puddle on the sidewalk","turned into a slug and crawled away"]
 
-randomize.addEventListener('click', result());
+randomize.addEventListener('click', result);
 
 function result() {
 
@@ -22,20 +22,22 @@ function result() {
     let zItem = randomValueFromArray(insertZ)
 
     newStory = newStory.replace(":insertx:",xItem)
-    newStory = newStory.replace(":insertx:",yItem)
-    newStory = newStory.replace(":insertx:",zItem)
+    newStory = newStory.replace(":insertx:",xItem)
+    newStory = newStory.replace(":inserty:",yItem)
+    newStory = newStory.replace(":insertz:",zItem)
 
   if(customName.value !== '') {
     let name = customName.value;
-
+    newStory = newStory.replace("Bob",name)
   }
 
   if(document.getElementById("uk").checked) {
-    let weight = Math.round(300);
-    let temperature =  Math.round(94);
-
+    let weight = Math.round(300*0.0714286)+" stones";
+    let temperature =  Math.round((94 - 32) * 5/9)+" centigrades";
+    newStory = newStory.replace("94 fahrenheit",temperature)
+    newStory = newStory.replace("300 pounds",weight)
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }

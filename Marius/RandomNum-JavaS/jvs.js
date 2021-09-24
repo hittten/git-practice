@@ -41,3 +41,4 @@ function checkGuess() {
     guessField.focus();
 }
 guessSubmit.addEventListener('click', checkGuess);
+

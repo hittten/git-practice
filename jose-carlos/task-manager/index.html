@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Administrador de tareas</h1>
+    </header>
+
+    <main>
+        <div class="box">
+            <div id="add">
+                <input type="text" id="addTask" placeholder="¿Qué necesitas hacer?">
+            </div>
+            <div id="tasks">
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task1">
+                    <p>Mi primera tarea</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task2">
+                    <p>Una tarea sin terminar</p>
+                </div>
+                <div class="task finished">
+                    <input type="checkbox" name="tasklist" id="task3" checked>
+                    <p>Una tarea terminada</p>
+                </div>
+                <div class="editing-task">
+                    <input type="text" name="editingTask" id="editingTask" value="Una tarea en modo edición">
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task4">
+                    <p>Una tarea para eliminar</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task5">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, beatae. Voluptate pariatur,
+                        quaerat
+                        doloremque alias, neque nulla, doloribus vero consequuntur fugit optio facere? Fugit laborum
+                        veritatis ad expedita, officiis quia.</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task6">
+                    <p>Tarea número 7</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task7">
+                    <p>Tarea número 8</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task8">
+                    <p>Tarea número 9</p>
+                </div>
+                <div class="task">
+                    <input type="checkbox" name="tasklist" id="task9">
+                    <p>Tarea número 10</p>
+                </div>
+            </div>
+            <div id="panel">
+                <p>Quedan 9 tareas</p>
+                <div class="btns">
+                    <button class="btn-disabled" disabled>Todas</button>
+                    <button>Pendientes</button>
+                    <button>Completadas</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal-box">
+                <div class="modal-title">
+                    <p>¿Estás seguro de que deseas eliminar esta tarea?</p>
+                </div>
+                <div class="modal-body">
+                    <p>Una tarea para eliminar</p>
+                </div>
+                <div class="modal-footer">
+                    <button>Si</button>
+                    <button>No</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+</html>

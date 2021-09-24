@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Tareas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Administración de tareas</h1>
+    </header>
+    <main>
+        <form action="">
+            <input type="text" placeholder="¿Qué necesitas hacer?" class="search">
+            <div>
+                <label for="primera-tarea">
+                    <input type="checkbox" name="primera-tarea">
+                    Mi primera tarea
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div>
+                <label for="tarea-sin-terminar">
+                    <input type="checkbox" name="tarea-sin-terminar">
+                    Una tarea sin terminar
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div>
+                <label for="tarea-terminada">
+                    <input type="checkbox" name="tarea-terminada" checked>
+                    Una tarea terminada
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div class="tarea-edicion">
+                <div>
+                    <label for="tarea-edicion">
+                        Una tarea en modo edicion <br>
+                    </label>
+                    <span class="material-icons btn-delete">delete_outline</span>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <label for="tarea-eliminar">
+                    <input type="checkbox" name="tarea-eliminar">
+                    Una tarea para eliminar
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div class="tarea-texto-largo">
+                <input type="checkbox" name="tarea-texto-largo">
+                <label for="tarea-texto-largo">                    
+                    Una tarea con un texto largo: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+                    impedit, et magni similique nobis libero aliquam? Iste quis nam, consequatur minima saepe aspernatur
+                    rem asperiores labore enim repellendus veritatis est?""
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div>
+                <label for="tarea-7">
+                    <input type="checkbox" name="tarea-7">
+                    Tarea numero 7
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div>
+                <label for="tarea-8">
+                    <input type="checkbox" name="tarea-8">
+                    Tarea numero 8
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div>
+                <label for="tarea-9">
+                    <input type="checkbox" name="tarea-9">
+                    Tarea numero 9
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div>
+                <label for="tarea-10">
+                    <input type="checkbox" name="tarea-10">
+                    Tarea numero 10
+                </label>
+                <span class="material-icons btn-delete">delete_outline</span>
+            </div>
+            <div class="botonera">
+                <small>Quedan 9 tareas</small>
+                <div class="botones">
+                    <button>Todas</button>
+                    <button>Pendientes</button>
+                    <button>Completadas</button>
+                </div>                
+            </div>
+        </form>
+        
+    </main>
+    <div class="modal">
+        <div>
+            <h2>¿Estas seguro de que deseas eliminar
+                esta tarea?
+            </h2>
+            <p>Una tarea para eliminar</p>
+            <div class="modal-botones">
+                <button>Si</button>
+                <button>No</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

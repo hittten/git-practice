@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+    font-family: 'Roboto';
+}
+
+h1,h2,h3,h4,h5{
+    font-family: Bebas Neue;
+    font-weight: unset;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+h1{
+    font-size: 1.2em;
+    margin: 0;
+}
+h2{
+    font-size: 3rem;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+header h1{
+    margin-left: 1em;
+}
+nav ul{
+    text-align: center;
+}
+nav ul li{
+    display: block;
+    color: #a2a2a2;
+    text-align: center;
+    margin-right:auto;
+}
+a{
+    text-decoration: unset;
+    color: unset;
+}
+button{
+    border: 2px solid #1c6698;
+    padding: 1em 3em;
+    color: #1c6698;
+    font-weight: bold;
+
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+}
+
+.fondo-negro{
+    background-color: black;
+    color: #a2a2a2;
+}
+.ocultar{
+    display: none !important;
+}
+.fas{
+    color: #a2a2a2;
+}
+
+article{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3em;
+}
+.scroll{
+    overflow: scroll;
+}
+
+article section div{
+    width: 250px;
+}
+article section :first-child{
+    margin-right: 2em;
+}
+footer{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer h1{
+    margin: 1em 0;
+}
+.skills{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+article p{
+   width: 60%;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+}

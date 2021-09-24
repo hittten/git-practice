@@ -1,0 +1,123 @@
+/*General*/
+body{
+    background-color:lightgray;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+header{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+form{
+    max-width:500px;
+    margin: 0 auto; 
+    background-color: white;  
+    box-shadow: 2px 2px 2px lightgray; 
+}
+
+input,span,button{
+    cursor: pointer;
+}
+
+h1{
+    font-weight: 700;
+}
+
+::placeholder{
+    padding-left: 10px;
+}
+
+/*layout*/
+
+form div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+ form div :first-child,span:last-child{
+    padding: 0 7px;
+} 
+
+form .search{
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.5px solid lightgray;
+}
+
+form .tarea-edicion{
+    flex-direction: column;    
+}
+form .tarea-edicion hr{
+    width: 80%;
+    align-self: left;    
+    margin-left: 5px;
+}
+form .tarea-texto-largo{
+    align-items: flex-start;
+}
+form .botonera{
+    margin-top: 20px;
+    border-top: 0.2px solid lightgray;
+    padding: 10px 0;
+}
+form .botonera small{
+    padding-left: 5px;
+}
+form .botones{
+  display: flex;
+  flex-shrink: 0;
+  justify-content: unset;
+  width: auto;
+  align-items: center;
+  margin-top: 0;
+  padding: 0 10px ;
+  gap: 10px;
+}
+
+button{
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    padding: 5px !important;
+}
+
+.modal{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 0;
+}
+.modal div{
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+}
+.modal .modal-botones{
+    flex-direction: row;
+    margin: 0;
+}
+.modal .modal-botones button{
+    width: 80px;
+    height: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -58,10 +58,11 @@
     const randomize = document.querySelector('.randomize');
     const story = document.querySelector('.story');
 
-    function randomValueFromArray(array){
-        const random = Math.floor(Math.random()*array.length);
+    function randomValueFromArray(array) {
+        const random = Math.floor(Math.random() * array.length);
         return array[random];
     }
+
     let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.\n" +
         "\n" +
         "Willy the Goblin\n" +
@@ -102,9 +103,40 @@
     let insertY = "the soup kitchen\n" +
         "Disneyland\n" +
         "the White House";
-    let insertz = "spontaneously combusted\n" +
+    let insertZ = "spontaneously combusted\n" +
         "melted into a puddle on the sidewalk\n" +
-        "turned into a slug and crawled away"
+        "turned into a slug and crawled away";
+
+    randomize.addEventListener('click', result);
+
+    function result() {
+        newStory = storyText;
+        xItem = randomValueFromArray(insertX);
+        yItem = randomValueFromArray(insertY);
+        zItem = randomValueFromArray(insertZ);
+
+        newStory = newStory.replace(':insertx:',xItem);
+        newStory = newStory.replace(':inserty:',yItem);
+        newStory = newStory.replace(':insertz:',zItem);
+
+        if (customName.value !== '') {
+            let name = customName.value;
+            newStory = newStory.replace("Bob",name);
+
+
+        }
+
+        if (document.getElementById("uk").checked) {
+            const weight = Math.round(300*0.0714286) + ' stone';
+            const temperature =  Math.round((94-32) * 5 / 9) + ' centigrade';
+            newStory = newStory.replace('94 fahrenheit',temperature);
+            newStory = newStory.replace('300 pounds',weight);
+
+        }
+
+        story.textContent = newStory;
+        story.style.visibility = 'visible';
+    }
 
 </script>
 </body>

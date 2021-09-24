@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de tareas</title>
+    <link rel="stylesheet" href="styles/styleIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body>
+<h1>Administrador de tareas</h1>
+
+<div class="for">
+    <form>
+
+        <input type="text" name="task" placeholder="¿Qué necesitas hacer?">
+
+        <ul>
+
+            <li>
+                <input type="checkbox" id="pTarea" name="pTarea" value="pTarea">
+                <label for="pTarea"> Mi primera tarea</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="sTarea" name="sTarea" value="sTarea">
+                <label for="sTarea">Una tarea sin terminar</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="nTarea" name="nTarea" value="nTarea" checked>
+                <label for="nTarea">
+                    <del>Una tarea terminada</del>
+                </label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+        </ul>
+
+        <label>
+            <input type="text" name="editTask" value="Una tarea en modo edición">
+            <!--                        <span class="material-icons">check_outline</span>-->
+        </label>
+
+        <ul>
+            <li>
+                <input type="checkbox" id="eTarea" name="eTarea" value="eTarea">
+                <label for="eTarea">Una tarea para eliminar</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="lTarea" name="lTarea" value="lTarea">
+                <label for="lTarea">Una tarea con un texto muy largo: "Lorem ipsum dolor sit amet, consectetur
+                    adipisicing
+                    elit. Accusamus alias aliquam dolor laborum minus officiis, optio quia repellendus. Cum est eum
+                    inventore
+                    iure
+                    maxime nihil rem reprehenderit totam ut vel.</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="siTarea" name="siTarea" value="siTarea">
+                <label for="siTarea">Tarea numero 7</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="oTarea" name="oTarea" value="oTarea">
+                <label for="oTarea">Tarea numero 8</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="nuTarea" name="nuTarea" value="nuTarea">
+                <label for="nuTarea">Tarea numero 9</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+            <li>
+                <input type="checkbox" id="dTarea" name="dTarea" value="dTarea">
+                <label for="dTarea">Tarea numero 10</label>
+                <span class="material-icons">delete_outline</span>
+            </li>
+
+
+        </ul>
+    </form>
+    <div class="foot">
+        <p>Quedan 9 tareas</p>
+
+        <span>
+        <button>Todas</button>
+        <button>Pendientes</button>
+        <button>Completadas</button>
+        </span>
+    </div>
+
+</div>
+
+<div class="alert">
+
+
+    <div class="message">
+        <h1>¿Estás seguro de que deseas eliminar esta tarea?</h1>
+        <p class="pMessage">Una tarea para eliminar</p>
+
+        <span class="mButtons">
+        <button>Si</button>
+        <button>No</button>
+    </span>
+    </div>
+</div>
+</body>
+</html>

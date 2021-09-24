@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**/
+
+body {
+    background: lightgrey;
+}
+
+h1 {
+    color: grey;
+    text-align: center;
+    font-family: 'Patua One';
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+div {
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    width: 375px;
+    color: grey;
+    font-family: 'Roboto';
+}
+
+input[type="text"] {
+    border: none;
+    width: 355px;
+    border-bottom: 1px solid grey;
+    padding: 10px 10px;
+}
+
+
+form ul {
+    width: inherit;
+    list-style: none;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+span {
+    float: right;
+}
+
+form ul li {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+p {
+    font-size: 8px;
+}
+
+div.foot {
+    border-top: grey 1px solid;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+button {
+    color: white;
+    font-size: 10px;
+    background-color: #224d4a;
+    border-radius: 2px;
+    border: none;
+    padding: 2px 5px;
+}
+
+div.alert { /*position: absolute;*/
+    /*top: 0;*/
+    /*display: block;*/
+}
+
+div.message {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    background: white;
+    width: 250px;
+    height: 250px;
+    color: grey;
+    margin-bottom: 30px;
+    font-family: 'Roboto';
+}
+
+h1 {
+    color: #224d4a;
+    padding: 5px;
+}
+
+.pMessage {
+    color: #224d4a;
+    text-align: center;
+
+}
+
+.mButtons {
+    text-align: center;
+    vertical-align: bottom;
+    margin-bottom: 20px;
+}
+
+span.mButtons button {
+    padding: 10px 15px;
+}

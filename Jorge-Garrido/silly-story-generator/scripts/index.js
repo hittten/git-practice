@@ -18,27 +18,36 @@ let insertZ = ["spontaneously combusted ", " melted into a puddle on the sidewal
 
 // 3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
 
-let randomize = document.getElementById("randomize");
 randomize.addEventListener('click', result);
 
 function result() {
-
+    // Creo variable "newStory"
     let newStory = storyText;
-    let xItem = randomValueFromArray();
-    let yItem = randomValueFromArray();
-    let zItem = randomValueFromArray();
+
+    // Creo las tres variable de los arrays, igualándolos al método "randomValueFromArray()"
+    let xItem = randomValueFromArray(insertX);
+    let yItem = randomValueFromArray(insertY);
+    let zItem = randomValueFromArray(insertZ);
+
+    // Sustituyo los tres marcadores de posición con el método "replace()"
+    newStory = newStory.replace(':insertx:', xItem);
+    newStory = newStory.replace(':inserty:', yItem);
+    newStory = newStory.replace(':insertz:', zItem);
+    newStory = newStory.replace(':insertz:', zItem);
 
     if (customName.value !== '') {
         let name = customName.value;
-
+        newStory = newStory.replace('Bob', name);
     }
 
     if (document.getElementById("uk").checked) {
-        let weight = Math.round(300);
-        let temperature = Math.round(94);
+        let weight = Math.round(300 * 0.07) + ' stones';
+        let temperature = Math.round((94 - 32) * 5 / 9) + ' centigrades';
 
+        newStory = newStory.replace('300 pounds', weight);
+        newStory = newStory.replace('94 fahrenheit', temperature);
     }
 
-    // story.textContent = ;
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }

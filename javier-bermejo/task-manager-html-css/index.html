@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Administrador de tareas</h1>
+    </header>
+    <main>
+        <div class="pop-up">
+            <h2>¿Estás seguro de que deseas eliminar esta tarea?</h2>
+            <div class="popup-content">
+                <p>Una tarea para eliminar</p>
+                <div>
+                    <span class="pop-up-btn">Si</span>
+                    <span class="pop-up-btn">No</span>
+                </div>
+            </div>
+        
+        
+        </div>
+        <div class="box">
+            <div class="wrap">
+                <label for="¿Que necesitas hacer?">
+                    <input class="input-box" type="text" name="input-text" placeholder="¿Que necesitas hacer?">
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Primera tarea">
+                    <input type="checkbox">Mi primera tarea<span class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Tarea sin terminar">
+                    <input type="checkbox">Una tarea sin terminar<span class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Tarea terminada">
+                    <input type="checkbox" checked><del>Una tarea terminada</del><span
+                        class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap input-edition">
+                <p class="task-edition">Una tarea en modo edición </p>
+                <span class="material-icons"> check </span>
+            </div>
+            <div class="wrap">
+                <label for="Tarea para eliminar">
+                    <input type="checkbox">Una tarea para eliminar<span class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Tarea texto largo">
+                    <input type="checkbox">Una tarea con texto largo Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Quis pariatur, impedit odio fuga explicabo placeat eos reiciendis molestias a molestiae optio
+                    repellendus quia? Similique sequi laboriosam perferendis eveniet. Quasi, nulla?<span
+                        class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Tarea 7">
+                    <input type="checkbox">Tarea numero 7<span class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Tarea 8">
+                    <input type="checkbox">Tarea numero 8<span class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Tarea 9">
+                    <input type="checkbox">Tarea numero 9<span class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap">
+                <label for="Tarea 10">
+                    <input type="checkbox">Tarea numero 10<span class="material-icons">delete_outline</span>
+                </label>
+            </div>
+            <div class="wrap footer">
+                <p class="remain-task">Quedan 9 tareas</p>
+                <span class="inactive-btn">Todas</span>
+                <span class="active-btn">Pendientes</span>
+                <span class="active-btn">Completadas</span>
+            </div>
+        </div>
+
+        
+
+    </main>
+    
+
+
+
+
+</body>
+
+</html>

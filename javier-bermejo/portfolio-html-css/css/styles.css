@@ -1,0 +1,255 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/* article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+
+/*general*/
+body	{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.43;
+	background-color: #e7e7e7;
+	margin: 0;
+	text-align: center;
+}
+
+h1, h2, h3, h4	{
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 1.5px;
+	font-weight: normal;
+}
+
+h1	{
+	margin-bottom: 32px;
+}
+
+h2	{
+	margin-bottom: 24px;
+}
+
+.button	{
+	font-family: inherit;
+	font-weight: 500;
+	text-decoration: none;
+	color: #1c6698;
+	display: inline-block;
+	padding: 13px 31px;
+  	border-radius: 3px;
+	border: solid 2px #1c6698;
+	margin-top: 24px;
+	line-height: 8px;
+}
+
+strong	{
+	font-weight: 500;
+}
+
+/*layout*/
+.wrapper	{ 		/*update article #skills .list::before,
+	           			article #skills .list::after*/
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+article section:nth-child(even)	{
+	background-color: black;
+}
+
+article section	{
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+
+
+/*header*/
+header	{
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 64px;
+	background-color: black;
+	color: #a2a2a2;
+}
+
+header h2	{
+	font-size: 14px;
+	margin: 0;
+}
+
+header #icon-close	{
+	display: none;
+}
+
+header nav, header.nav-open #icon-open	{
+	display: none;
+}
+
+
+header.nav-open nav,
+header.nav-open #icon-close	{
+	display: block;
+}
+
+header.nav-open #icon-close	{
+	z-index: 1;
+}
+
+header nav	{
+	background-color: #e7e7e7;
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: absolute;
+	padding: 50px;
+}
+
+header nav ul	{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+header nav ul li	{
+	padding: 20px;
+}
+
+/*main section (summary)*/
+article section:first-child p	{
+	font-size: 10px;
+}
+
+article section:first-child	h1	{
+	font-size: 36px;
+	width: 220px;
+	margin: 0 auto;
+}
+
+/*about me*/
+article #about-me	{
+	color: #a2a2a2;
+}
+
+/*skills*/
+article #skills	{
+
+}
+
+article #skills .list::before,
+article #skills .list::after	{
+	content: "";
+	margin-left: 24px;/*update wrapper*/
+}
+
+article #skills	.list	{
+	padding-bottom: 16px;
+	overflow: auto;
+	display: flex;
+}
+
+article #skills .list .skill	{
+	margin-right: 32px;
+	border-radius: 3px;
+	box-shadow: 1px 2px 4px 8 rgba(0, 0, 0, 0.5);
+	flex-shrink: 0;
+	padding: 30px 34px;
+	background-color: black;
+	width: 208px;
+	color: #a2a2a2;
+}
+
+article #skills .list .skill:last-child	{
+	margin-right: 0;
+}
+
+article #skills .skill h3	{
+	margin-top: 0;
+	font-size: 14px;
+	border: solid 1px #fff;
+}
+
+article #skills .skill h4	{
+	color: white;
+}
+
+article #skills .skill ul	{
+	padding: 0;
+	list-style: none;
+
+}
+/*footer*/
+footer	{
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #a2a2a2;
+	height: 104px;
+}
+
+@media screen and (min-width: 768px)	{
+	article #skills .list .skill	{
+		margin-right: 120px;
+	}
+}
+
+@media screen and (min-width: 500px)	{
+	article #skills .list	{
+		justify-content: center;
+	}
+}

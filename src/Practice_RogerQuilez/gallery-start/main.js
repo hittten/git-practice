@@ -17,19 +17,17 @@ for (let i = 0; i < 5; i ++) {
 
 /* Wiring up the Darken/Lighten button */
 
-const buttonDark = document.querySelector('.dark');
+btn.addEventListener('click',  () => {
 
-buttonDark.addEventListener('click',  () => {
-
-    if (buttonDark.classList.contains('dark')) {
-        displayedImage.style.filter = 'brightness(50%)';
-        buttonDark.textContent = 'Lightest';
-        buttonDark.setAttribute('class', 'light');
+    if (btn.classList.contains('dark')) {
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        btn.textContent = 'Lightest';
+        btn.setAttribute('class', 'light');
 
     } else {
-        displayedImage.style.filter = 'brightness(100%)';
-        buttonDark.textContent = 'Darken';
-        buttonDark.setAttribute('class', 'dark');
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.0)';
+        btn.textContent = 'Darken';
+        btn.setAttribute('class', 'dark');
     }
     
 })

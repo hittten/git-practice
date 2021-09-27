@@ -15,6 +15,18 @@ for (let i = 0; i < 5; i ++) {
     })
 }
 
-
-
 /* Wiring up the Darken/Lighten button */
+
+const buttonDark = document.querySelector('.dark');
+
+buttonDark.addEventListener('click',  () => {
+
+    if (buttonDark.textContent == 'Darken') {
+        displayedImage.style.filter = 'brightness(50%)';
+        buttonDark.textContent = 'Lightest';
+    } else {
+        displayedImage.style.filter = 'brightness(100%)';
+        buttonDark.textContent = 'Darken';
+    }
+    
+})

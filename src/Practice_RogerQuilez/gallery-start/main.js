@@ -21,12 +21,17 @@ const buttonDark = document.querySelector('.dark');
 
 buttonDark.addEventListener('click',  () => {
 
-    if (buttonDark.textContent == 'Darken') {
+    if (buttonDark.classList.contains('dark')) {
         displayedImage.style.filter = 'brightness(50%)';
         buttonDark.textContent = 'Lightest';
+        buttonDark.classList.remove('dark');
+        buttonDark.classList.add('light');
+
     } else {
         displayedImage.style.filter = 'brightness(100%)';
         buttonDark.textContent = 'Darken';
+        buttonDark.classList.remove('light');
+        buttonDark.classList.add('dark');
     }
     
 })

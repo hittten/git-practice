@@ -6,8 +6,30 @@ const overlay = document.querySelector('.overlay');
 
 /* Looping through images */
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-thumbBar.appendChild(newImage);
+for (let i = 1; i < 6; i++) {
+    // Recorro las imágenes
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', 'images/pic' + i + '.jpg');
+    thumbBar.appendChild(newImage);
+
+    // Creo un controlador 'onclick' a cada img en miniatura
+    newImage.onclick = function(e) {
+        displayedImage.src = e.target.src;
+    }
+}
 
 /* Wiring up the Darken/Lighten button */
+
+btn.onclick = function() {
+    const clase = btn.getAttribute('class');
+
+    if (clase == 'dark') {
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Lighten';
+        overlay.style.background = 'rgba(0,0,0,0.5)';
+    } else {
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+        overlay.style.background = 'rgba(0,0,0,0)';
+    }
+}

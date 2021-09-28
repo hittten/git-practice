@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>OOJS: Task 1</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+ </head>
+
+<body>
+
+<section class="preview">
+
+
+
+</section>
+
+</body>
+<script>
+    //TODO EXERCICE 1
+    // function Shape(name, sides, sideLength) {
+    //     this.name = name;
+    //     this.sides = sides;
+    //     this.sideLength = sideLength;
+    // }
+    // Shape.prototype.calcPerimeter = function() {
+    //     console.log(this.name,this.sides * this.sideLength);
+    // }
+    // const square = new Shape("square", 4, 5);
+    // square.calcPerimeter();
+    // const triangle= new Shape("triangle", 3, 3);
+    // triangle.calcPerimeter();
+    //TODO EXERCICE 2
+    // class Shape{
+    // constructor(name, sides, sideLength) {
+    //     this.name = name;
+    //     this.sides = sides;
+    //     this.sideLength = sideLength;
+    // }
+    // calcPerimeter () {
+    //     console.log(this.name,this.sides * this.sideLength);
+    // }}
+    // const square = new Shape("square", 4, 5);
+    // square.calcPerimeter();
+    // const triangle= new Shape("triangle", 3, 3);
+    // triangle.calcPerimeter();
+    //TODO EXERCICE 3
+    class Shape{
+    constructor(name, sides, sideLength) {
+        this.name = name;
+        this.sides = sides;
+        this.sideLength = sideLength;
+    }
+    calcPerimeter () {
+        console.log(this.name,this.sides * this.sideLength);
+    }
+    calcArea(){
+        console.log(this.name, this.sideLength * this.sideLength);
+    }
+    }
+    class Square extends Shape {
+        constructor(sideLength) {
+            super("square", 4, sideLength);
+
+        }
+    }
+    const square = new Square(5);
+    square.calcPerimeter();
+    square.calcArea();
+    const triangle= new Shape("triangle", 3, 3);
+    triangle.calcPerimeter();
+
+</script>
+
+</html>

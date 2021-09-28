@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+<section class="preview"></section>
+
+</body>
+
+
+<script>
+
+    let response;
+    let score = 75;
+    let machineActive = false;
+
+    // Add your code here
+    if(machineActive !== 'true' && (score < 0 && score > 100))
+    {
+        response = 'This is not possible, an error has occurred.'
+    }
+    else if (0 <= score && score <= 19)
+    {
+        response = 'That was a terrible score — total fail!'
+    }
+    else if (score >=20 && score <= 39){response = 'You know some things, but it’s a pretty bad score. Needs improvement.'}
+
+    else if (40 <= score && score <= 69){response = 'You did a passable job, not bad!'}
+
+    else if (70 <= score && score <= 89){response = 'That’s a great score, you really know your stuff.'}
+
+    else if(90 <= score && score <= 100){response = 'What an amazing score! Did you cheat? Are you for real?'
+    }
+    else{}
+    response = ''
+    // Don't edit the code below here!
+
+    section.innerHTML = ' ';
+    let para1 = document.createElement('p');
+
+    para1.textContent = `Your score is ${ score }`;
+
+
+    section.appendChild(para1);
+
+
+
+</script>
+
+</html>

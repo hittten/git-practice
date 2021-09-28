@@ -1,0 +1,57 @@
+body{
+    font-size: 16px;
+}
+
+label, p{
+    color: grey;
+}
+
+header input{
+    width: 100%;
+    border-style: none;
+
+}
+
+form span{
+    margin-left: calc(100% - 50px);
+    margin-right: 10px;
+}
+.longText{
+    width: 80%;
+}
+.editionTask{
+    border-style: none;
+    color: black;
+    width: 85%;
+}
+
+.material-icons:hover{
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+footer p{
+    margin-right: auto;
+}
+
+.button{
+    text-decoration: none;
+    border-radius: 3px;
+    border: solid 2px darkslategrey;
+    padding: 5px 20px;
+    align-self: center;
+    background-color: darkslategrey;
+    color: white;
+    margin-right: 10px;
+}
+
+.button:hover{
+    border: solid 2px dimgrey;
+    background-color: dimgrey;
+    color: lightgrey;
+}

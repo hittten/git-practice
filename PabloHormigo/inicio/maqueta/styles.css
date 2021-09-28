@@ -1,0 +1,122 @@
+body{
+    margin: 0 auto;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 64px;
+    background-color: black;
+    color: #a2a2a2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+header img{
+    margin-right: 12px;
+}
+
+main{
+    height: 1670px;
+    background-color: #e7e7e7;
+}
+
+.mainScreen{
+    background-color: #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.mainScreen p{
+    margin-top: 60px;
+}
+
+.mainScreen h1{
+    height: 129px;
+    width: 221px;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-right: 49px;
+    margin-left: 50px;
+    margin-top: 24px;
+}
+
+.btnHablamos{
+    width: 160px;
+    height: 40px;
+    margin-top: 34px;
+    margin-bottom: 70px;
+    border: solid 2px #1c6698;
+    border-radius: 3px;
+    color: #1c6698;
+}
+
+.btnHablamos:hover{
+    background-color: #1c6698;
+    color: white;
+}
+
+article{
+    background-color: black;
+    height: 578px;
+    margin-top: 0;
+}
+
+.primera{
+    padding-top: 60px;
+}
+
+.primera h2{
+    color: #e7e7e7;
+    text-align: center;
+}
+
+.text{
+    margin: 23px 28px 48px 28px;
+}
+
+.text p{
+    text-align: center;
+    color: #a2a2a2;
+}
+
+.text p:nth-child(2){
+    font-weight: bold;
+}
+
+.primera .video{
+    margin: 48px 24px 70px 24px;
+}
+
+.segunda h2{
+    text-align: center;
+    margin: 130px 111px 42px 112px;
+}
+
+.secciones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.cuadro{
+    height: 350px;
+    width: 208px;
+    background-color: black;
+    margin: 42px 32px 70px 24px;
+}

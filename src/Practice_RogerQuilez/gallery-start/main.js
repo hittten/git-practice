@@ -23,7 +23,7 @@ btn.addEventListener('click',  () => {
         overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
         btn.textContent = 'Lightest';
         btn.setAttribute('class', 'light');
-
+        
     } else {
         overlay.style.backgroundColor = 'rgba(0,0,0,0.0)';
         btn.textContent = 'Darken';

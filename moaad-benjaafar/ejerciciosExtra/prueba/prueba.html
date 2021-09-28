@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2</title>
+    <style>
+        p {
+            margin: 10px auto;
+            width: 20%;
+            height: 20%;
+            text-align: center;
+            border: 4px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<p class="alerta">BOTON ALERTA
+</p>
+<p class="cambio_color">BOTON CAMBIO COLOR
+</p>
+<p class="añadir_imagen">BOTON AÑADIR IMAGEN
+</p>
+<p class="contador">BOTON SUMAR NUMERO
+</p>
+<h1></h1>
+<img src="" alt="">
+
+<script>
+    ///De esta manera tienes todas las funcionalidades que quieras en
+    // el boton cuando o texto que hayas instanciado(en este caso desde
+    // la clase cambio)
+    let btnAlerta = document.querySelector('.alerta');
+    btnAlerta.addEventListener('click', () => {
+        alert('MENSAJE DE ALERTA').style.color="yellow";
+    });
+
+    let btnCambioColor = document.querySelector('.cambio_color');
+    body = document.querySelector("body");
+     btnCambioColor.addEventListener('click', () => {
+        body.style.backgroundColor = "blue";
+        //btnAlerta.style.backgroundColor = "red";
+    });
+    let btnAñadirImagen = document.querySelector('.añadir_imagen');
+      const newImage = document.querySelector('img');
+      let on;
+     btnAñadirImagen.addEventListener('click', () => {
+         if(!on){
+             newImage.setAttribute('src', `buu.jpg`);
+             btnAñadirImagen.textContent="BOTON QUITAR IMAGEN";
+             on=true;
+         }else{
+             newImage.setAttribute('src', ``);
+             btnAñadirImagen.textContent="BOTON AÑADIR IMAGEN";
+             on=false;
+         }
+     });
+    let btnSumarNumero = document.querySelector('.contador');
+    const sumar = document.querySelector('h1');
+    let n=0;
+    btnSumarNumero.addEventListener('click', () => {
+        sumar.textContent = `${n}`;
+        n++;
+        //btnAlerta.style.backgroundColor = "red";
+    });
+</script>
+</body>
+</html>

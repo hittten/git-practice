@@ -2,6 +2,10 @@ body{
     font-size: 16px;
 }
 
+*{
+    margin-top: 10px;
+}
+
 label, p{
     color: grey;
 }
@@ -12,10 +16,21 @@ header input{
 
 }
 
-form span{
-    margin-left: calc(100% - 50px);
+form article{
+    display: flex;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+
+form article span{
+    margin-left: auto;
     margin-right: 10px;
 }
+
 .longText{
     width: 80%;
 }
@@ -55,3 +70,4 @@ footer p{
     background-color: dimgrey;
     color: lightgrey;
 }
+

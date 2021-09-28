@@ -1,0 +1,72 @@
+
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+    background: #e7e7e7;
+    margin: 0;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 1.5px;
+
+}
+ul{
+    display: inline;
+
+
+}
+div {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background: black;
+    color: #e7e7e7;
+
+}
+header h2 {
+    font-size: 14px;
+}
+header nav {
+    display: none;
+}
+article{
+    padding: 40px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    width: 220px;
+    margin: 0 auto;
+}
+
+article section {
+    margin-bottom: 70px;
+    margin-top: 60px;
+    background: black;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: #e7e7e7;
+    padding: 10px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+
+
+

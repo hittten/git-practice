@@ -26,6 +26,10 @@ button.addEventListener('click', () => {
     let cont = 1;
     let inputValue = input.value;
     let listCount = document.createElement('li');
+    
+    if (!inputValue) {
+        return;
+    }
 
     const printList = setInterval(() => {
 

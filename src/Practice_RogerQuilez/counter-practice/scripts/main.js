@@ -31,13 +31,14 @@ button.addEventListener('click', () => {
         return;
     }
 
-    const printList = setInterval(() => {
+    const printList = setInterval(function setCurrentTime() {
 
         let currentCount = `${cont}/${inputValue}`;
+        
         listCount.textContent = currentCount;
         
         if (cont == 1) {
-            list.append(listCount);
+            list.prepend(listCount);
         }
 
         console.log(currentCount);
@@ -49,7 +50,10 @@ button.addEventListener('click', () => {
             listCount.remove();
         })
 
-    }, 1000)
+        return setCurrentTime;
+
+    }(), 1000)
+    
 
 })
 

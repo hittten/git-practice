@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Async - Practice</title>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+
+    // fetch('data/persons.json')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //     for (let i = 0; i < data.length; i++){
+    //         let personName = data[i].name;
+    //         let listElement = document.createElement('li')
+    //         listElement.innerText = personName;
+    //         document.body.appendChild(listElement);
+    //     }
+    //     })
+
+const list = document.getElementById('list');
+
+
+    Promise.all([
+        fetch('data/persons.json'),
+        fetch('data/kittens.json')
+    ]).then(values => {
+
+        personsJSON = values[0].json();
+        kittensJSON = values[1].json();
+
+        personsJSON.then(dataP => {
+
+            for (let person of dataP) {
+                //
+                // let ul = document.createElement('ul');
+
+                let nLi = document.createElement('li');
+                nLi.textContent = person.name;
+                //
+                // ul.appendChild(nLi);
+
+                kittensJSON.then(dataK => {
+
+                    list.appendChild(nLi);
+                    let nUl = document.createElement('ul');
+
+                    for (const kitten of dataK[person.name]) {
+
+                        let nLi2 = document.createElement('li');
+                        nLi2.textContent = kitten.name;
+                        nUl.appendChild(nLi2);
+
+
+
+                    }
+                    list.appendChild(nUl);
+                })
+
+            }
+        })
+
+    })
+
+</script>
+</body>
+</html>

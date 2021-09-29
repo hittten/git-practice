@@ -16,7 +16,7 @@ fetch('data/persons.json')
     fetch('data/kittens.json')
       .then(response => response.json())
       .then((gatos => {
-        for (const persona of personas) { S
+        for (const persona of personas) {
           for (const gato of gatos[persona]) {
             let asignar = document.querySelector(`#${persona}`)
             const dd = document.createElement("dd")

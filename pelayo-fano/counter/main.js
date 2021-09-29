@@ -15,19 +15,40 @@ input.addEventListener("keyup",(e)=>{
         input.select()
         input.focus()
         aniadirLista()
-     }
+    }
+    butContar.addEventListener("click",()=>{
+        input.select()
+        input.focus()
+        aniadirLista()
+    })
 })
 
 function aniadirLista(){
     const ul = document.querySelector("#counters")
     const li = document.createElement("li")
     if(input.value !== ''){
-        let numero = input.value
-        li.textContent = numero
+        let maximo = Number(input.value) 
+        let numero = 0
+        li.textContent = `0/${maximo}`
         ul.appendChild(li)
+
+        const interval = setInterval(() => {
+            numero++
+            li.textContent = `${numero}/${maximo}`
+            console.log(`${numero}/${maximo}`)
+            if(numero === maximo){
+                stop(interval)
+            }
+        }, 1000);
+       
+        ul.appendChild(li)        
         li.addEventListener("click",()=>{
+            stop(interval)
             li.remove()
         })
-    }     
-   
+    } 
+}
+
+function stop(i){
+    clearInterval(i)
 }

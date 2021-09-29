@@ -34,12 +34,12 @@
                 button.click();
             }
         //Añadimos el contador que añade un objeto contador que sirve como párrafo y se suman hasta alcanzar el máximo
-            function Contador(seconds) {
-            for (start == 0; start <= seconds; start++){
+            function Contador(tiempo) {
+            for (start == 0; start <= tiempo; start++){
             const contar = document.createElement('p');
-            contar.textContent = start,seconds;
+            contar.textContent = start,tiempo;
             //Añadimos que el contador se elimine cuando alcanza a los segundos
-            if(contar=seconds){
+            if(contar=tiempo){
                 contar.remove();
             }
             }

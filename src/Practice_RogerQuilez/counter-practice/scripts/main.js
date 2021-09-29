@@ -54,7 +54,7 @@ button.addEventListener('click', () => {
         listCount.remove();
     }
     
-    stopCounter(inputValue * 1000).then(stopInterval);
+    stopCounter(inputValue * 1200).then(stopInterval);
 
 })
 

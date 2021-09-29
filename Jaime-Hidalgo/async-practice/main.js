@@ -4,7 +4,7 @@ async function datos() {
     let res = await fetch("data/persons.json");
     let personas = await res.json();
     //console.log(personas);
-    
+
     let res1 = await fetch("data/kittens.json");
     let gatos = await res1.json();
     //console.log(gatos);
@@ -18,7 +18,6 @@ async function datos() {
         li.appendChild(nombre);
         li.className = "name";
         document.querySelector('.lista').appendChild(li)
-
 
        
         for (let j = 0; j < gatos[nomb].length; j++) {

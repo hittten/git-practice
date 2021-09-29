@@ -30,8 +30,11 @@ button.addEventListener('click', () => {
     const printList = setInterval(() => {
 
         let currentCount = `${cont}/${inputValue}`;
-        listCount.innerHTML = currentCount;
-        list.append(listCount);
+        listCount.textContent = currentCount;
+        
+        if (cont == 1) {
+            list.append(listCount);
+        }
 
         console.log(currentCount);
 

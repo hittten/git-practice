@@ -7,10 +7,8 @@ const list = document.querySelector('#counters');
 input.addEventListener('keyup', (e) => {
     (input.value ? button.textContent =
         `Contar ${input.value} segundos` : button.textContent = `Contar`);
-})
 
-/* TASK 3 - Al presionar la tecla "Enter" se debe accionar el botón "Contar" */
-input.addEventListener('keydown', (e) => {
+    /* TASK 3 - Al presionar la tecla "Enter" se debe accionar el botón "Contar" */
     if (e.key === 'Enter') {
         button.click();
     }
@@ -19,44 +17,46 @@ input.addEventListener('keydown', (e) => {
 /* TASK 4 - Al momento de contar debe quedar enfocado el input con todo el valor seleccionado para que no se tenga que borrar */
 /* TASK 5 - Cada cambio de segundo sebe reflejarse en el elemento de la lista y en la consola de javascript */
 /* TASK 6 - Al hacer clic en el contador, se debe eliminar */
+const stopCounter = (intervalTime) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(resolve);
+        }, intervalTime);
+    })
+}
+
 button.addEventListener('click', () => {
 
     input.select();
 
-    let cont = 1;
-    let inputValue = input.value;
-    let listCount = document.createElement('li');
-    
-    if (!inputValue) {
+    if (!input.value) {
         return;
     }
 
-    const printList = setInterval(function setCurrentTime() {
+    let cont = 0;
+    let inputValue = input.value;
+    const listCount = document.createElement('li');
+    listCount.textContent = `${cont}/${inputValue}`;
 
-        let currentCount = `${cont}/${inputValue}`;
-        
-        listCount.textContent = currentCount;
-        
-        if (cont == 1) {
-            list.prepend(listCount);
-        }
+    const printList = setInterval(() => {
+        cont++;
+        listCount.textContent = `${cont}/${inputValue}`;
+        console.log(`${cont}/${inputValue}`);
 
-        console.log(currentCount);
+    }, 1000)
 
-        (cont == inputValue ? clearInterval(printList) : cont++);
+    list.prepend(listCount);
 
-        listCount.addEventListener('click', () => {
-            clearInterval(printList);
-            listCount.remove();
-        })
+    listCount.addEventListener('click', stopInterval);
 
-        return setCurrentTime;
-
-    }(), 1000)
+    function stopInterval() {
+        clearInterval(printList);
+        listCount.remove();
+    }
     
+    stopCounter(inputValue * 1000).then(stopInterval);
 
 })
-
 
 
 

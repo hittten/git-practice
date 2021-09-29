@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Async - Practice</title>
+</head>
+<body>
+    <h1>Async - Practice</h1>
+    <img src="assets/spinner.svg" alt="loading">
+<script>
+    //Elements
+    const myList = document.createElement('ul');
+    const imagen = document.querySelector('img');
+
+    //functions
+    async function downloadInfo(){
+        const personsData = fetch('data/persons.json').then(r => r.json());
+        const kittensData = fetch('data/kittens.json').then(r => r.json());
+
+        return await Promise.all([personsData,kittensData]);
+    }
+
+    function printList(persons,kittens){
+        for(let person of persons){
+            myList.innerHTML += `
+                <li>
+                    ${person.name}
+                    <ul>
+                        ${
+                            kittens[person.name]
+                                .map(kitten => `<li>${kitten.name}</li>`)
+                                .join('')
+                        }
+                    </ul>
+                </li>
+            `;
+        }
+        document.body.append(myList);
+    }
+
+    async function main(){
+        const [persons,kittens] = await downloadInfo();
+        console.log(persons,kittens);
+
+        printList(persons,kittens);
+
+        imagen.remove();
+    }
+
+    //main
+    main();
+</script>
+</body>
+</html>

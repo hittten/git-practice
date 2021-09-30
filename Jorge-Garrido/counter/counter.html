@@ -22,20 +22,25 @@
     </ul>
     <label>
         Segundos:
-        <input type="number">
+        <input type="number" onkeyup="modificarBoton()">
     </label>
     <button>Contar</button>
     <ul id="counters"></ul>
     <script>
         const input = document.querySelector('input');
         const button = document.querySelector('button');
-        const counters = document.getElementById('counters');
+        const lista = document.getElementById('counters');
 
 
 
-        function modificarBoton(segundos) {
-            segundos = document.querySelector('input').value;
-            button.textContent = `Contar ${ segundos } segundos`;
+        function modificarBoton() {
+            let segundos = document.querySelector('input').value;
+            if (segundos != '') {
+                button.innerHTML = `Contar ${ segundos } segundos`;
+            } else {
+                button.innerHTML = `Contar`;
+            }
+
         }
     </script>
 </body>

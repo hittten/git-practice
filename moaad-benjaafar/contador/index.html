@@ -55,18 +55,24 @@
         const newLi = document.createElement('li');
         newLi.onclick=removeItem;
         let inputValue = cantidad;
-          const timeInterval = window.setInterval( function foo()  {
+          const timeInterval = window.setInterval( function foo(e)  {
             newLi.textContent = `${n} / ${inputValue} `;
+              setTimeout(()=>{
+                  if (n-1==cantidad){
+                      console.log('noentro');
+                     newLi.remove();
+                  }
+              },cantidad*1000+1000);
             if(n === 0) newLine.prepend(newLi);
             if(n === Number(inputValue))clearInterval(timeInterval);
-              n++;
+               n++;
               return foo;
-        }(), 1000 );
-
+          }(), 1000 );
     });
     function removeItem(e) {
         e.target.parentElement.removeChild(e.target);
     }
+
 
 </script>
 </body>

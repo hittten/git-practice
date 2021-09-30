@@ -14,8 +14,10 @@ input.addEventListener('keyup', (e) => {
     }
 })
 
+
+
 /* TASK 4 - Al momento de contar debe quedar enfocado el input con todo el valor seleccionado para que no se tenga que borrar */
-/* TASK 5 - Cada cambio de segundo sebe reflejarse en el elemento de la lista y en la consola de javascript */
+/* Cuando se haga clic en el botón se debe agregar un nuevo elemento a la lista con los "segundos/cantidad" */
 /* TASK 6 - Al hacer clic en el contador, se debe eliminar */
 const stopCounter = (intervalTime) => {
     return new Promise((resolve) => {
@@ -27,6 +29,7 @@ const stopCounter = (intervalTime) => {
 
 button.addEventListener('click', () => {
 
+    input.focus();
     input.select();
 
     if (!input.value) {
@@ -38,6 +41,7 @@ button.addEventListener('click', () => {
     const listCount = document.createElement('li');
     listCount.textContent = `${cont}/${inputValue}`;
 
+    
     const printList = setInterval(() => {
         cont++;
         listCount.textContent = `${cont}/${inputValue}`;

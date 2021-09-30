@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Async - Practice</title>
+
+    <script>
+
+        let persons;
+        let ulPersons = document.createElement("ul");
+
+        fetch('data/persons.json')
+            .then(data => data.json())
+            .then(data => {
+                persons = data;
+                console.log(data);
+                return fetch('data/kittens.json');
+            })
+            .then(data => data.json())
+            .then(data => {
+                console.log(data);
+                for (const person of persons) {
+                    console.log(person.name)
+                    let liPersons = document.createElement("li");
+                    let liPersonName = document.createTextNode('Los gatos de ' + person.name + ' son:')
+                    liPersons.appendChild(liPersonName)
+                    ulPersons.appendChild(liPersons)
+                    let ulCats = document.createElement("ul");
+                    const namePerson = person.name;
+                    // console.log(data[`${namePerson}`]);
+                    for (const cats of data[`${namePerson}`]) {
+                        console.log(cats.name)
+                        let liCats = document.createElement("li");
+                        let gender = 'Femenino';
+                        if(cats.gender === 'm'){
+                             gender = 'Masculino'
+                        }
+                        let liCatsName = document.createTextNode( cats.name + " de genero: ' " + gender + " '")
+                        liCats.appendChild(liCatsName)
+                        ulCats.appendChild(liCats)
+                        ulPersons.appendChild(ulCats)
+                    }
+                }
+                document.body.appendChild(ulPersons)
+
+            });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

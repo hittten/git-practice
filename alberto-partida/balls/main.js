@@ -38,7 +38,7 @@ class Ball extends Shape{
         this.size = size;
     }
 
-    // define ball draw method
+// define ball draw method
     draw(){
         ctx.beginPath();
         ctx.fillStyle = this.color;
@@ -46,7 +46,7 @@ class Ball extends Shape{
         ctx.fill();
     };
 
-    // define ball update method
+// define ball update method
     update(){
         if((this.x + this.size) >= width) {
             this.velX = -(this.velX);
@@ -90,7 +90,7 @@ class EvilCircle extends Shape{
         this.size = 10;
     }
 
-    // define EvilCircle draw method
+// define EvilCircle draw method
     draw(){
         ctx.beginPath();
         ctx.strokeStyle = this.color;
@@ -99,7 +99,7 @@ class EvilCircle extends Shape{
         ctx.stroke();
     }
 
-    // define EvilCircle checkBounds method
+// define EvilCircle checkBounds method
     checkBounds(){
         if((this.x + this.size) >= width) {
             this.x -= this.size;
@@ -118,7 +118,7 @@ class EvilCircle extends Shape{
         }
     }
 
-    // define EvilCircle setControls method
+// define EvilCircle setControls method
     setControls(){
         let _this = this;
         window.onkeydown = function(e) {
@@ -134,7 +134,7 @@ class EvilCircle extends Shape{
         };
     }
 
-    // define EvilCircle collision detection
+// define EvilCircle collision detection
     collisionDetect(){
         for(let j = 0; j < balls.length; j++) {
             if( balls[j].exists ) {

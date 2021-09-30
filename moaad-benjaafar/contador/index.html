@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Contador</h1>
+<ul>
+    <li>Al ir escribiendo los segundos, se debe actualizar el botón con "Contar x segundos"</li>
+    <li>Si el input está vacío el botón debe decir solo "Contar"</li>
+    <li>Al presionar la tecla "Enter" se debe accionar el botón "Contar"</li>
+    <li>Al momento de contar debe quedar enfocado el input con todo el valor seleccionado para que no se tenga que
+        borrar
+    </li>
+    <li>Cuando se haga clic en el botón se debe agregar un nuevo elemento a la lista con los "segundos/cantidad"
+    </li>
+    <li>Cada cambio de segundo sebe reflejarse en el elemento de la lista y en la consola de javascript</li>
+    <li>Al hacer clic en el contador, se debe eliminar</li>
+</ul>
+<label>
+    Segundos:
+    <input type="number">
+</label>
+
+
+<button>Contar</button>
+<ul id="counters"></ul>
+<script>
+    const inputWrite = document.querySelector('input');
+    const buttonText = document.querySelector('button');
+    const newLine = document.querySelector('#counters'); //ul
+    let cantidad;
+     // const textEnter = document.getElementById('number');
+
+    const inputHandler = (e) =>{
+        buttonText.innerHTML = 'Contar ' + e.target.value + ' segundos';
+        e.target.value === '' ? buttonText.innerHTML = 'Contar' : '';
+        cantidad = e.target.value;
+        // if(e.target.value==='') buttonText.innerHTML = 'Contar';
+    }
+
+    inputWrite.addEventListener('input', inputHandler );
+    inputWrite.addEventListener('keydown',(e)=>{
+        if (e.key === 'Enter') {
+            document.querySelector("button").click();
+        }
+    });
+    buttonText.addEventListener('click', () => {
+        inputWrite.select();
+        let n = 0;
+        const newLi = document.createElement('li');
+        newLi.onclick=removeItem;
+        let inputValue = cantidad;
+          const timeInterval = window.setInterval( function foo()  {
+            newLi.textContent = `${n} / ${inputValue} `;
+            if(n === 0) newLine.prepend(newLi);
+            if(n === Number(inputValue))clearInterval(timeInterval);
+              n++;
+              return foo;
+        }(), 1000 );
+
+    });
+    function removeItem(e) {
+        e.target.parentElement.removeChild(e.target);
+    }
+
+</script>
+</body>
+</html>
